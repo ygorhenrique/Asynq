@@ -1,0 +1,8 @@
+C:\workspace2.0\github\Asynq\Asynq\Asynq\bin\Debug\netstandard2.1\Asynq.deps.json
+C:\workspace2.0\github\Asynq\Asynq\Asynq\bin\Debug\netstandard2.1\Asynq.dll
+C:\workspace2.0\github\Asynq\Asynq\Asynq\bin\Debug\netstandard2.1\Asynq.pdb
+C:\workspace2.0\github\Asynq\Asynq\Asynq\obj\Debug\netstandard2.1\Asynq.csprojAssemblyReference.cache
+C:\workspace2.0\github\Asynq\Asynq\Asynq\obj\Debug\netstandard2.1\Asynq.AssemblyInfoInputs.cache
+C:\workspace2.0\github\Asynq\Asynq\Asynq\obj\Debug\netstandard2.1\Asynq.AssemblyInfo.cs
+C:\workspace2.0\github\Asynq\Asynq\Asynq\obj\Debug\netstandard2.1\Asynq.dll
+C:\workspace2.0\github\Asynq\Asynq\Asynq\obj\Debug\netstandard2.1\Asynq.pdb
