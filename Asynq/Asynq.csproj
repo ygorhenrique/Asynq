@@ -11,6 +11,7 @@
     <PackageTags>ValueTask WhenAll Task Asynq</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Product>Asynq</Product>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>

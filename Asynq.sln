@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynq", "Asynq\Asynq.csproj", "{D97B1FA3-FC4A-4F06-806B-85397C36305F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynq", "Asynq\Asynq.csproj", "{D97B1FA3-FC4A-4F06-806B-85397C36305F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Asynq.Tests", "Asynq.Tests\Asynq.Tests.csproj", "{F7DF1F8E-23A2-45C2-9080-74E1A7951361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Asynq.Tests", "Asynq.Tests\Asynq.Tests.csproj", "{F7DF1F8E-23A2-45C2-9080-74E1A7951361}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7C2A2A2A-F7EE-421F-96CF-5F5F7E77E03F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
