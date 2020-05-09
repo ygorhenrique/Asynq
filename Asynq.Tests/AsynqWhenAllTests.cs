@@ -6,9 +6,15 @@ namespace Asynq.Tests
     public class AsynqWhenAllTests
     {
         [Fact]
-        public async Task Test1()
+        public async Task AllValueTasksCompleted()
         {
-            ValueTask<int>[] tasks = new ValueTask<int>[] { FromInt(0), FromInt(1), FromInt(2), FromInt(3) };
+            ValueTask<int>[] tasks = new ValueTask<int>[]
+            {
+                new ValueTask<int>(0),
+                new ValueTask<int>(1),
+                new ValueTask<int>(2),
+                new ValueTask<int>(3)
+            };
 
             var values = await tasks.WhenAll();
 
@@ -19,9 +25,30 @@ namespace Asynq.Tests
                 value => Assert.Equal(3, value));
         }
 
-        public ValueTask<int> FromInt(int result)
+        [Fact]
+        public async Task AllValueTasksIncompleted()
         {
-            return new ValueTask<int>(result);
+            ValueTask<int>[] tasks = new ValueTask<int>[]
+            {
+                new ValueTask<int>(DelayedInt(0)),
+                new ValueTask<int>(DelayedInt(1)),
+                new ValueTask<int>(DelayedInt(2)),
+                new ValueTask<int>(DelayedInt(3))
+            };
+
+            var values = await tasks.WhenAll();
+
+            Assert.Collection(values,
+                value => Assert.Equal(0, value),
+                value => Assert.Equal(1, value),
+                value => Assert.Equal(2, value),
+                value => Assert.Equal(3, value));
+        }
+
+        private async Task<int> DelayedInt(int value)
+        {
+            await Task.Delay(1000);
+            return value;
         }
     }
 }

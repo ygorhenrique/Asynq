@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <Authors>Ygor Henrique S. Randes</Authors>
+    <Company />
+    <Description>Useful extensions for ValueTask</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ygorhenrique/Asynq</RepositoryUrl>
+    <PackageReleaseNotes>Preview of WhenAll functionality</PackageReleaseNotes>
+    <PackageTags>ValueTask WhenAll Task Asynq</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Product>Asynq</Product>
   </PropertyGroup>
 
 </Project>

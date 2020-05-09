@@ -8,7 +8,7 @@ namespace Asynq
         public static async ValueTask<T[]> WhenAll<T>(this ValueTask<T>[] valueTasks)
         {
             T[] values = new T[valueTasks.Length];
-            List<Task<T>> toAwait = null;
+            Dictionary<int, Task<T>> toAwait = null;
 
             for (int i = 0; i < values.Length; i++)
             {
@@ -18,8 +18,8 @@ namespace Asynq
                 }
                 else
                 {
-                    toAwait ??= new List<Task<T>>(valueTasks.Length);
-                    toAwait.Add(valueTasks[i].AsTask());
+                    toAwait ??= new Dictionary<int, Task<T>>(valueTasks.Length);
+                    toAwait.Add(i, valueTasks[i].AsTask());
                 }
             }
 
@@ -28,17 +28,10 @@ namespace Asynq
                 return values;
             }
 
-            var awaited = await Task.WhenAll(toAwait);
-            int key = 0;
-            for (int i = 0; i < values.Length; i++)
+            var awaited = await Task.WhenAll(toAwait.Values);
+            foreach (var key in toAwait.Keys)
             {
-                if (values[i] != null)
-                {
-                    continue;
-                }
-
-                values[i] = awaited[key];
-                key++;
+                values[key] = toAwait[key].Result;
             }
 
             return values;
