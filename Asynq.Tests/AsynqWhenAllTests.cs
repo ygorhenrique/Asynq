@@ -8,7 +8,7 @@ namespace Asynq.Tests
         [Fact]
         public async Task AllValueTasksCompleted()
         {
-            ValueTask<int>[] tasks = new ValueTask<int>[]
+            ValueTask<int>[] tasks = new[]
             {
                 new ValueTask<int>(0),
                 new ValueTask<int>(1),
@@ -28,7 +28,7 @@ namespace Asynq.Tests
         [Fact]
         public async Task AllValueTasksIncompleted()
         {
-            ValueTask<int>[] tasks = new ValueTask<int>[]
+            ValueTask<int>[] tasks = new[]
             {
                 new ValueTask<int>(DelayedInt(0)),
                 new ValueTask<int>(DelayedInt(1)),
