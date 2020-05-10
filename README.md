@@ -1,6 +1,6 @@
 # Asynq
 
-Useful extension methods to `ValueTask`
+Adds WhenAll, WhenAny, and FireAndForget methods to `ValueTask`
 
 
 ----
