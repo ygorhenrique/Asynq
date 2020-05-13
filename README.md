@@ -16,7 +16,7 @@ A tiny `ValueTask` extensions library.
     var values = await Asynq.WhenAny(valueTasks);
 
     // WhenAny extension 
-    var values = await valueTasks.WhenAll();
+    var values = await valueTasks.WhenAny();
 
     // Fire and Forget
     valueTask.FireAndForget();
