@@ -1697,18 +1697,13 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "System.Threading.Tasks.Extensions/4.0.0": {
+      "System.Threading.Tasks.Extensions/4.5.4": {
         "type": "package",
-        "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Runtime": "4.1.0",
-          "System.Threading.Tasks": "4.0.11"
-        },
         "compile": {
-          "lib/netstandard1.0/_._": {}
+          "ref/netcoreapp2.1/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {}
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.Threading.Thread/4.0.0": {
@@ -1963,9 +1958,12 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Asynq/1.0.0": {
+      "Asynq/1.0.2-preview3": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
         "compile": {
           "bin/placeholder/Asynq.dll": {}
         },
@@ -5890,20 +5888,41 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "System.Threading.Tasks.Extensions/4.0.0": {
-      "sha512": "pH4FZDsZQ/WmgJtN4LWYmRdJAEeVkyriSwrv2Teoe5FOU0Yxlb6II6GL8dBPOfRmutHGATduj3ooMt7dJ2+i+w==",
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "type": "package",
-      "path": "system.threading.tasks.extensions/4.0.0",
+      "path": "system.threading.tasks.extensions/4.5.4",
       "files": [
         ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
-        "system.threading.tasks.extensions.4.0.0.nupkg.sha512",
-        "system.threading.tasks.extensions.nuspec"
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Threading.Thread/4.0.0": {
@@ -6498,7 +6517,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Asynq/1.0.0": {
+    "Asynq/1.0.2-preview3": {
       "type": "project",
       "path": "../Asynq/Asynq.csproj",
       "msbuildProject": "../Asynq/Asynq.csproj"
@@ -6506,7 +6525,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Asynq >= 1.0.0",
+      "Asynq >= 1.0.2-preview3",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.0",
@@ -6520,11 +6539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
+      "projectUniqueName": "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
       "projectName": "Asynq.Tests",
-      "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
+      "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
       "packagesPath": "C:\\Users\\ysobralrandes\\.nuget\\packages\\",
-      "outputPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\obj\\",
+      "outputPath": "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6545,8 +6564,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\Asynq.csproj": {
-              "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\Asynq.csproj"
+            "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.csproj": {
+              "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj": {}
+    "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj": {}
   },
   "projects": {
-    "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj": {
+    "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
+        "projectUniqueName": "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
         "projectName": "Asynq.Tests",
-        "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
+        "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\Asynq.Tests.csproj",
         "packagesPath": "C:\\Users\\ysobralrandes\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.Tests\\obj\\",
+        "outputPath": "C:\\workspace2.0\\github\\Asynq\\Asynq.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -32,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\Asynq.csproj": {
-                "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\Asynq.csproj"
+              "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.csproj": {
+                "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\Asynq.csproj": {
-      "version": "1.0.0",
+    "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.csproj": {
+      "version": "1.0.2-preview3",
       "restore": {
-        "projectUniqueName": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\Asynq.csproj",
+        "projectUniqueName": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.csproj",
         "projectName": "Asynq",
-        "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\Asynq.csproj",
+        "projectPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq.csproj",
         "packagesPath": "C:\\Users\\ysobralrandes\\.nuget\\packages\\",
-        "outputPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\Asynq\\obj\\",
+        "outputPath": "C:\\workspace2.0\\github\\Asynq\\Asynq\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -100,7 +100,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.1"
+          "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -109,7 +109,7 @@
           "https://travix-int.myget.org/F/private-nuget/auth/237e7bc9-de03-4287-8fac-1b5a5bb39db8/api/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.1": {
+          "netstandard2.0": {
             "projectReferences": {}
           }
         },
@@ -120,7 +120,19 @@
         }
       },
       "frameworks": {
-        "netstandard2.1": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Threading.Tasks.Extensions": {
+              "target": "Package",
+              "version": "[4.5.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -131,11 +143,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "NETStandard.Library": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
