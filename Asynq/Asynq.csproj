@@ -4,16 +4,17 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Ygor Henrique S. Randes</Authors>
     <Company />
-    <Description>Useful extensions for ValueTask</Description>
+    <Description>A tiny library with extensions for ValueTask: WhenAll, WhenAny, FireAndForget</Description>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/ygorhenrique/Asynq</RepositoryUrl>
-    <PackageReleaseNotes>Preview of WhenAll functionality</PackageReleaseNotes>
+    <PackageReleaseNotes>* WhenAll, WhenAny, and FireAndForget methods to `ValueTask`
+* AsValueTask extension</PackageReleaseNotes>
     <PackageTags>Task Asynq ValueTask WhenAll WhenAny FireAndForget</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Product>Asynq</Product>
     <Version>1.0.2-preview3</Version>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
