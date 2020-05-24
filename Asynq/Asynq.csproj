@@ -12,7 +12,7 @@
     <PackageTags>Task Asynq ValueTask WhenAll WhenAny FireAndForget</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Product>Asynq</Product>
-    <Version>1.0.2-preview3</Version>
+    <Version>1.0.4</Version>
     <AssemblyVersion>1.0.4.0</AssemblyVersion>
     <FileVersion>1.0.4.0</FileVersion>
     <LangVersion>8.0</LangVersion>
