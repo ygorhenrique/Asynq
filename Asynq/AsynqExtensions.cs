@@ -34,7 +34,8 @@ namespace Asynq
                 return values;
             }
 
-            await Task.WhenAll(toAwait.Values);
+            await Task.WhenAll(toAwait.Values)
+                .ConfigureAwait(false);
 
             foreach (var key in toAwait.Keys)
             {
@@ -66,7 +67,8 @@ namespace Asynq
                 }
             }
             if (completedTasks != valueTasks.Length)
-                await Task.WhenAll(toAwait);
+                await Task.WhenAll(toAwait)
+                    .ConfigureAwait(false);
         }
 
         public static async ValueTask<T> WhenAny<T>(this ValueTask<T>[] valueTasks)
@@ -93,7 +95,8 @@ namespace Asynq
                 tasks[i] = valueTasks[i].AsTask();
             }
 
-            return (await Task.WhenAny(tasks)).Result;
+            return (await Task.WhenAny(tasks)
+                .ConfigureAwait(false)).Result;
         }
 
         public static async ValueTask<ValueTask> WhenAny(this ValueTask[] valueTasks)
@@ -119,7 +122,8 @@ namespace Asynq
                 }
             }
 
-            return new ValueTask(await Task.WhenAny(toAwait));
+            return new ValueTask(await Task.WhenAny(toAwait)
+                .ConfigureAwait(false));
         }
     }
 }

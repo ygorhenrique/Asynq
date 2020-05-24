@@ -19,7 +19,7 @@ namespace Asynq
         {
             try
             {
-                await valueTask;
+                await valueTask.ConfigureAwait(false);
             }
             catch (Exception e)
             {
