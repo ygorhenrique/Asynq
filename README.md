@@ -2,6 +2,9 @@
 
 A tiny `ValueTask` extensions library.
 
+[![Nuget](https://img.shields.io/nuget/v/Asynq)](https://www.nuget.org/packages/Asynq/)
+[![Nuget](https://img.shields.io/nuget/dt/Asynq)](https://www.nuget.org/packages/Asynq/)
+
 ----
 ## Usage
 ```csharp
