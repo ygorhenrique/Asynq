@@ -20,7 +20,7 @@ namespace Asynq.Tests
         [Fact]
         public async Task NonGenericAsTask_ReturnsValidValueTask()
         {
-            Task asyncTask = Task.Delay(10);
+            Task asyncTask = Task.Delay(200);
             ValueTask valueTask = asyncTask.AsValueTask();
 
             Assert.Equal(asyncTask, valueTask.AsTask());
@@ -31,7 +31,7 @@ namespace Asynq.Tests
 
         public async Task<T> AsyncValue<T>(T value)
         {
-            await Task.Delay(10);
+            await Task.Delay(200);
             return value;
         }
     }

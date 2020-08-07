@@ -28,7 +28,10 @@ namespace Asynq
         }
 
         /// <summary>
+        /// Fire and Forget a ValueTask object.
+        /// This method will not throw any exceptions from the execution of the value task.
         ///
+        /// In case an exception is thrown or the task fails to complete onException handler will be called with the exception details.
         /// </summary>
         /// <param name="valueTask"></param>
         /// <param name="onException"></param>
@@ -38,12 +41,9 @@ namespace Asynq
             {
                 await valueTask.ConfigureAwait(false);
             }
-            catch (Exception e)
+            catch (Exception e) when (onException != null)
             {
-                if (onException != null)
-                {
-                    onException(e);
-                }
+                onException(e);
             }
         }
     }
