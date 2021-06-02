@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Asynq
 {
-    public static class Asynq
+    public static class AsynqTasks
     {
         /// <summary>
         /// Returns all values from each ValueTask as an array

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Xunit;
+using Asynq;
 
-namespace Asynq.Tests
+namespace AsynqTests
 {
     public class AsynqTests
     {
@@ -17,7 +18,7 @@ namespace Asynq.Tests
                 new ValueTask<int>(3)
             };
 
-            var values = await Asynq.WhenAll(tasks);
+            var values = await AsynqTasks.WhenAll(tasks);
 
             Assert.Collection(values,
                 value => Assert.Equal(0, value),
@@ -29,7 +30,7 @@ namespace Asynq.Tests
         [Fact]
         public async Task AllValueTasksIncompleted()
         {
-            var values = await Asynq.WhenAll(DelayedInt(0),
+            var values = await AsynqTasks.WhenAll(DelayedInt(0),
                 DelayedInt(1),
                 DelayedInt(2),
                 DelayedInt(3));
@@ -64,14 +65,14 @@ namespace Asynq.Tests
                 DelayedInt(0, 1000)
             };
 
-            Assert.Equal(1, await Asynq.WhenAny(tasks));
+            Assert.Equal(1, await AsynqTasks.WhenAny(tasks));
         }
 
         [Fact]
         public async Task WhenAny_ArgumentExceptionThrownWhenEmptyArrayOfValueTask()
         {
             await Assert.ThrowsAsync<ArgumentException>(async () =>
-                await Asynq.WhenAny(Array.Empty<ValueTask<int>>()));
+                await AsynqTasks.WhenAny(Array.Empty<ValueTask<int>>()));
         }
 
         private async ValueTask<int> DelayedInt(int value, int delay = 1000)

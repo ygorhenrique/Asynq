@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Xunit;
+using Asynq;
 
-namespace Asynq.Tests
+namespace AsynqTests
 {
     public class FireAndForgetTest
     {
