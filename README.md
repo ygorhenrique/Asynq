@@ -10,13 +10,13 @@ A tiny `ValueTask` extensions library.
 ```csharp
     
     // await WhenAll
-    var values = await Asynq.WhenAll(valueTasks);
+    var values = await AsynqTasks.WhenAll(valueTasks);
 
     // WhenAll extension 
     var values = await valueTasks.WhenAll();
 
     // await WhenAny
-    var values = await Asynq.WhenAny(valueTasks);
+    var values = await AsynqTasks.WhenAny(valueTasks);
 
     // WhenAny extension 
     var values = await valueTasks.WhenAny();
