@@ -29,9 +29,9 @@ namespace Asynq
             {
                 await task.ConfigureAwait(false);
             }
-            catch (Exception e) when (onException != null)
+            catch (Exception e)
             {
-                onException(e);
+                if (onException != null) onException(e);
             }
         }
     }
